@@ -1,0 +1,23 @@
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: auto;
+    background-color: gray;
+    padding: 10px;
+  
+    &__logo {
+      img {
+        max-width: 100%; 
+        height: auto; 
+      }
+    }
+  
+    &__text {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      font-weight: bold;
+      text-align: right; 
+    }
+  }
+  

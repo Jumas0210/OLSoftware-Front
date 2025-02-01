@@ -1,1 +1,28 @@
-<p>login works!</p>
+<app-header-login></app-header-login>
+<div class="container">
+  <div class="login">
+    <p class="login__title">Bienvenido</p>
+    <p class="login__description">Necesitamos tu usuario y contraseña</p>
+    <form [formGroup]="loginForm" class="form" (submit)="login()">
+      <input
+        type="email"
+        class="form__input"
+        placeholder="Correo Electronico"
+        formControlName="user"
+      />
+      <input
+        type="password"
+        class="form__input"
+        placeholder="Aquí va tu contraseña"
+        formControlName="password"
+      />
+      <label class="terms">
+        <input type="checkbox" formControlName="acceptTerms" /> Acepto los
+        términos y condiciones
+      </label>
+      <button class="form__action" type="submit" [disabled]="loginForm.invalid">
+        Ingresar
+      </button>
+    </form>
+  </div>
+</div>
